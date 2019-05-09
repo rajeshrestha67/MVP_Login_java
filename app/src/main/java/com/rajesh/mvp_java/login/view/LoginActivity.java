@@ -28,8 +28,6 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Lo
         setContentView(R.layout.activity_sign_in);
         initUI();
         initializeListeners();
-        userNameET.setText("test@gmail.com");
-        passwordET.setText("0000");
         loginPresenter = new LoginPresenter(LoginActivity.this);
     }
 
@@ -40,6 +38,10 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Lo
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Logging in...");
         progressDialog.setCancelable(false);
+
+
+        userNameET.setText("test@gmail.com");
+        passwordET.setText("0000");
     }
 
     private void initializeListeners() {
